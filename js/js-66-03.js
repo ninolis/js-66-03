@@ -256,10 +256,13 @@ console.log(min); // 1
 // }
 // console.log(min); // 1
 
-// Lesson 2-2 18-11-2022 Олексій Сімак
+//! =============================================
+// *** Lesson 2-2 18-11-2022 Олексій Сімак
 
 /////////////////////////////////////////////////
 /*
+** timeline 8:59
+
 Що буде виведено в консоль?
 function foo(array) {
 // for (let j = 0; j < array.length; j += 1) {
@@ -269,18 +272,167 @@ const numbers = [1, 2, 3, 4, 5];
 foo(numbers);
 console.log(numbers); // 1
 */
-function foo(array) {
-  for (let j = 0; j < array.length; j += 1) {
-    array[j] *= 2;
-  }
+// function foo(array) {
+//   for (let j = 0; j < array.length; j += 1) {
+//     array[j] *= 2;
+//   }
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// foo(numbers);
+// console.log(numbers); // [2, 4, 6, 8, 10]
+
+/////////////////////////////////////////////////
+/*
+
+** timeline 10:15
+Що буде виведено в консоль?
+
+greet()
+
+const greet = function()  {
+  console.log("Welcome")
 }
+*/
 
-const numbers = [1, 2, 3, 4, 5];
+// greet(); // Welcome
 
-foo(numbers);
-console.log(numbers); // 1
+// const greet = function () {
+//   console.log('Welcome');
+// };
+// Uncaught ReferenceError: Cannot access 'greet' before initialization
 
-///////////////////////////////////////////////
+// greet2(); // Welcome
+
+// function greet2() {
+//   console.log('Welcome');
+// }
+// Welcome
+
+/////////////////////////////////////////////////
+/*
+
+** timeline 12:37
+Що буде виведено в консоль?
+
+greet()
+
+function greet()  {
+  console.log("Welcome")
+}
+*/
+
+// greet(); // Welcome
+
+// function greet() {
+//   console.log('Welcome');
+// }
+// Welcome;
+
+/////////////////////////////////////////////////
+/*
+
+** timeline 13:28
+Що містить локальна змінна arguments у тілі функції?
+
+
+function foo ()  {
+  console.log(arguments)
+}
+*/
+
+// Псевдомасив аргументів;
+
+/////////////////////////////////////////////////
+/*
+
+** timeline 14:43
+Що буде виведено в консоль?
+
+function foo ()  {
+  console.log(arguments)
+}
+*/
+// Псевдомасив аргументів;
+// function foo() {
+//   console.log(arguments);
+// }
+
+// foo(5, 'Mango', true); // [5, 'Mango', true] Псевдомасив аргументів;
+
+/////////////////////////////////////////////////
+/*
+** timeline 15:42
+Псевдомасив це ... ?
+
+*/
+// Псевдомасив аргументів це такий же індексований список як масив, але без його методів;
+
+/////////////////////////////////////////////////
+/*
+** timeline 16:25
+Що доступне в області видимості функції?
+
+*/
+// Набір локальних та глобальних змінних;
+
+/////////////////////////////////////////////////
+/*
+** timeline 17:52
+За яким принципом працює стек викликів?
+
+*/
+// Last in, first out;
+
+/////////////////////////////////////////////////
+/*
+** timeline 22:43
+За яким принципом працює return?
+*/
+
+// function foo(array) {
+//   for (let j = 0; j < array.length; j += 1) {
+//     array[j] *= 2;
+//   }
+//   // return array;// without return - undefined, with return - [2, 4, 6, 8, 10]
+// }
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const newNumbers = foo(numbers);
+// console.log(newNumbers); // undefined
+// console.log(numbers); // [2, 4, 6, 8, 10]
+
+/////////////////////////////////////////////////
+/*
+** timeline 29:30
+early return
+*/
+
+// function add(a, b) {
+//   a + b; // without return - undefined, and message from console.log()
+//   return a + b; // with return - 6, and without message from console.log()
+//   console.log("This message doesn't print on screen! after return!!!");
+// }
+
+// const result = add(1, 5);
+// console.log(result);
+
+/////////////////////////////////////////////////
+/*
+** timeline 29:30
+early return
+*/
+
+// function add(a, b) {
+//   a + b; // without return - undefined, and message from console.log()
+//   return a + b; // with return - 6, and without message from console.log()
+// }
+
+// const result = add(1, 5);
+// console.log(result);
+
 // JS V2 block-3 Autochecking  ASSIGNMENT 00/41  Status: Done
 
 /*

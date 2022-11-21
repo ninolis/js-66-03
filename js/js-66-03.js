@@ -698,6 +698,100 @@ console.log(findSmallestNumber([49, 4, 7, 83, 12])); // 83
 
 */
 
+//! = = = = = = = = = = = = = = = = = = =
+// ** timeline 1:51:09
+/*
+Модуль 2. Заняття 4. Функції
+Example 7 - Середнє значення
+
+Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
+
+function calAverage() {}
+
+console.log(calAverage(1, 2, 3, 4)); // 2.5
+console.log(calAverage(14, 8, 2)); // 8
+console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+
+
+*/
+/*
+function calAverage() {
+  // console.log(arguments);
+  const numbers = arguments;
+  // console.log(numbers);
+  const numbersLength = numbers.length;
+  let sum = 0;
+  for (const i of numbers) {
+    // console.log(i);
+    sum += i;
+    // console.log(sum);
+  }
+  return sum / numbersLength;
+}
+
+console.log(calAverage(1, 2, 3, 4)); // 2.5
+console.log(calAverage(14, 8, 2)); // 8
+console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+*/
+/*
+
+
+*/
+
+/*
+
+*/
+
+//! = = = = = = = = = = = = = = = = = = =
+// ** timeline
+/*
+Модуль 2. Заняття 4. Функції
+Example 8 - Форматування часу
+
+Напиши функцію formatTime(minutes) яка переведе значення minutes (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
+
+const hours = Math.floor(totalMinutes / 60);
+const minutes = totalMinutes % 60;
+console.log(hours);
+console.log(minutes);
+
+const doubleDigitHours = String(hours).padStart(2, 0);
+const doubleDigitMinutes = String(minutes).padStart(2, 0);
+console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+
+function formatTime(minutes) {}
+
+console.log(formatTime(70)); // "01:10"
+console.log(formatTime(450)); // "07:30"
+console.log(formatTime(1441)); // "24:01"
+*/
+/*
+function formatTime(number) {
+  const totalMinutes = number;
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  // console.log(hours);
+  // console.log(minutes);
+  const doubleDigitHours = String(hours).padStart(2, 0);
+  const doubleDigitMinutes = String(minutes).padStart(2, 0);
+  // console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+  return `"${doubleDigitHours}:${doubleDigitMinutes}"`;
+}
+
+console.log(formatTime(70)); // "01:10"
+console.log(formatTime(450)); // "07:30"
+console.log(formatTime(1441)); // "24:01"
+}
+*/
+/*
+
+
+*/
+
+/*
+
+*/
+
 // JS V2 block-3 Autochecking  ASSIGNMENT 00/41  Status: Done
 
 /*

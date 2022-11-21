@@ -565,7 +565,7 @@ logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
 //   console.log(`${i + 1}: ${fruits[i]}`);
 // }
 */
-// /*
+/*
 function logItems(items) {
   for (let i = 0; i < items.length; i += 1) {
     // console.log(i);
@@ -576,7 +576,127 @@ function logItems(items) {
 logItems(['Mango', 'Poly', 'Ajax']);
 logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
 
-// */
+*/
+
+//! = = = = = = = = = = = = = = = = = = =
+// ** timeline 1:30:31 на заняттях перейшов лектор до 6 завдання
+/*
+Модуль 2. Заняття 4. Функції
+Example 5 - Логування контактів
+
+Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність. Кількість імен та телефонів гарантовано однакова.
+
+function printContactsInfo(names, phones) {}
+
+printContactsInfo(
+  'Jacob,William,Solomon,Artemis',
+  '89001234567,89001112233,890055566377,890055566300',
+);
+
+*/
+/*
+function printContactsInfo(names, phones) {
+  // names = names.split(',');
+  // phones = phones.split(',');
+  names = splitString(names, ',');
+  phones = splitString(phones, ',');
+  for (let i = 0; i < names.length; i += 1) {
+    // console.log(i);
+    console.log(`${i + 1}. ${names[i]}: ${phones[i]}`);
+  }
+}
+
+function splitString(str, splitter) {
+  return str.split(splitter);
+}
+
+printContactsInfo(
+  'Jacob,William,Solomon,Artemis',
+  '89001234567,89001112233,890055566377,890055566300'
+);
+
+*/
+
+//! = = = = = = = = = = = = = = = = = = =
+// ** timeline 1:30:31 на заняттях перейшов лектор до 6 завдання
+/*
+Модуль 2. Заняття 4. Функції
+Example 6 - Пошук найбільшого елемента
+
+Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
+
+function findLargestNumber(numbers) {}
+
+console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
+console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+
+
+*/
+/*
+function findLargestNumber(numbers) {
+  // let theLargestNumber = -1000000000;
+  let theLargestNumber = numbers[0];
+
+  for (let el = 0; el < numbers.length; el += 1) {
+    // console.log(el);
+    if (numbers[el] > theLargestNumber) {
+      theLargestNumber = numbers[el];
+    }
+  }
+  return theLargestNumber;
+}
+console.log(findLargestNumber([-100, -200, -3, 2, 17, 94, 1, 678, 23, 37])); // 94
+console.log(
+  findLargestNumber([-100, -200, -3, -2, -17, -94, -1, -678, -23, -37])
+); // 94
+console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+*/
+/*
+// Краще використовувати цикл for...of тому що не потрібні індекси
+function findLargestNumber(numbers) {
+  let max = numbers[0];
+
+  for (const number of numbers) {
+    if (number > max) {
+      max = number;
+    }
+  }
+  return max;
+}
+
+console.log(findLargestNumber([2, 17, 94, 1, 23, 37])); // 94
+console.log(findLargestNumber([49, 4, 7, 83, 12])); // 83
+
+/*
+function findSmallestNumber(numbers) {
+  let theSmallestNumber = numbers[0];
+
+  for (let el = 0; el < numbers.length; el += 1) {
+    if (numbers[el] < theSmallestNumber) {
+      theSmallestNumber = numbers[el];
+    }
+  }
+  return theSmallestNumber;
+}
+*/
+/*
+// Краще використовувати цикл for...of тому що не потрібні індекси
+function findSmallestNumber(numbers) {
+  let min = numbers[0];
+
+  for (const number of numbers) {
+    if (number < min) {
+      min = number;
+    }
+  }
+  return min;
+}
+
+console.log(findSmallestNumber([-100, -200, -3, 2, 17, 94, 1, 678, 23, 37])); // -200
+console.log(findSmallestNumber([-100, -17, -94, -1, -678, -23, -2, 46, -37])); // -678
+console.log(findSmallestNumber([49, 4, 7, 83, 12])); // 83
+
+*/
 
 // JS V2 block-3 Autochecking  ASSIGNMENT 00/41  Status: Done
 

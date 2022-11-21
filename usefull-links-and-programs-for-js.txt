@@ -1,6 +1,6 @@
 https://githowto.com/uk
 
-українська та англійська
+СѓРєСЂР°С—РЅСЃСЊРєР° С‚Р° Р°РЅРіР»С–Р№СЃСЊРєР°
 how to work with git
 
 https://github.com/goitacademy/js-instructor-examples/blob/main/lesson-04/uk.md

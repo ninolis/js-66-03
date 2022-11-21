@@ -433,39 +433,68 @@ early return
 // const result = add(1, 5);
 // console.log(result);
 
-// JS V2 block-3 Autochecking  ASSIGNMENT 00/41  Status: Done
+/////////////////////////////////////////////////
+// ** timeline 39:09
 
+//! = = = = = = = = = = = = = = = = = = =
 /*
-** THEORY
+Модуль 2. Заняття 4. Функції
+Example 1 - Індекс маси тіла
+Напиши функцію calcBMI(weight, height) яка розраховує та повертає індекс маси тіла людини. Для цього необхідно розділити вагу в кілограмах на квадрат висоти людини в метрах.
 
+Вага та висота будуть спеціально передані як рядки. Не цілі числа можуть бути задані у вигляді 24.7 або 24,7, тобто як роздільник дробової частини може бути кома.
 
-** TASK
+Індекс маси тіла необхідно округлити до однієї цифри після коми;
 
+const bmi = calcBMI('88,3', '1.75');
+console.log(bmi); // 28.8
 
-** Test
-
-
- */
-
-// Javascript Editor:
-// START
-/*
 
 */
-
-// Javascript Editor:
-// FINISH
+// It's better to write function to replace comma to dot
+// const str = '88,3';
 /*
+const bmi = calcBMI('88,3', '1.75');
+console.log(bmi); // 28.8
 
-console.log(
+// teacher's function
+
+function calcBMI(weight, height) {
+  weight = replaceCommfToDot(weight);
+  height = replaceCommfToDot(height);
+  return getRoundedNumber(weight / height ** 2);
+}
+
+function replaceCommfToDot(string) {
+  // under the hood: let string = "88,3"
+  return string.replace(',', '.');
+}
+
+function getRoundedNumber(number) {
+  return Number(number.toFixed(2));
+}
 */
 
-// RESULT
-/*
+/* my function
+function calcBMI(weight, height) {
+  const numberWeight = parseFloat(weight.replace(',', '.'));
+  const numberHeight = parseFloat(height.replace(',', '.'));
+  // const h = Number(height);
 
+  const result = (numberWeight / (numberHeight * numberHeight)).toFixed(1);
+  // const result = numberWeight / (numberHeight * numberHeight);
+  return result;
+}
 */
 
-///////////////////////////////////////////////
+// const bmi = calcBMI('88,3', '1.75');
+// const w = Number(weight);
+// const h = Number(height);
+// console.log(w); // 28.8
+// console.log(bmi); // 28.8
+// console.log(Number('1.75')); // 28.8
+// console.log(Number('88,3')); // 28.8
+
 // JS V2 block-3 Autochecking  ASSIGNMENT 00/41  Status: Done
 
 /*
